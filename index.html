@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap" rel="stylesheet">
+<style>
+
+
+html {
+box-sizing: border-box;
+}
+
+body {
+background: #111111;
+}
+
+.wrapper {
+width: 400px;
+transform: translate(-50%, -50%);
+background: grey;
+left: 50%;
+top: 50%;
+position: absolute;
+box-shadow: -10 10px 28px rgb(169, 223, 22);
+border: 1px solid black;
+
+}
+
+.screen {
+font-size: 40px;
+text-align: right;
+outline: none;
+width: 93%;
+height: 80px;
+background-color: lightblue;
+color: #40423f;
+margin: 10px;
+border: 1px solid black;
+font-family: 'MuseoModerno', cursive;
+}
+
+
+.calc-button-row {
+display: flex;
+align-content: stretch;
+justify-content: space-between;
+margin-bottom: 0.5%;
+}
+
+.calc-button {
+
+background: #d8d9db;
+color: black;
+height: 100px;
+flex-basis: 24.5%;
+border: 1px solid black;
+border-radius: 1%;
+font-size: 40px;
+cursor: pointer;
+outline: none;
+}
+
+.calc-button:hover {
+background: rgb(194, 188, 188);
+}
+
+.calc-button:active {
+background-color: #bbbcbe;
+}
+
+.triple {
+flex-basis: 74.8%;
+border-radius: 1%;
+}
+
+.calc-button:last-child {
+background: #df974c;
+color: white;
+}
+
+.calc-button:last-child:hover {
+background-color: #dfb07e;
+}
+
+.calc-button:last-child:active {
+background-color: #dd8d37;
+}
+
+.calc-button-row:last-child {
+padding-bottom: 0;
+}
+</style>
+</head>
+
+<body>
+
+<form class="wrapper" name="calculator">
+<section class="bg">
+<input type="text" class="screen" name="answer" placeholder="Latest calculator  ">
+</section>
+
+<section class="calc-buttons">
+<div class="calc-button-row">
+<input type="button" class="calc-button triple " value=" c " onclick="calculator.answer.value = ''" />
+<input type="button" class="calc-button" value=" &divide; " onclick="calculator.answer.value += '/'" />
+</div>
+
+<div class="calc-button-row">
+<input type="button" class="calc-button" value=" 7 " onclick="calculator.answer.value += '7'" />
+<input type="button" class="calc-button" value=" 8 " onclick="calculator.answer.value += '8'" />
+<input type="button" class="calc-button" value=" 9 " onclick="calculator.answer.value += '9'" />
+<input type="button" class="calc-button" value=" x " onclick="calculator.answer.value += '*'" />
+</div>
+
+<div class="calc-button-row">
+<input type="button" class="calc-button" value=" 4 " onclick="calculator.answer.value += '4'" />
+<input type="button" class="calc-button" value=" 5 " onclick="calculator.answer.value += '5'" />
+<input type="button" class="calc-button" value=" 6 " onclick="calculator.answer.value += '6'" />
+<input type="button" class="calc-button" value=" - " onclick="calculator.answer.value += '-'" />
+</div>
+
+<div class="calc-button-row">
+<input type="button" class="calc-button" value=" 1 " onclick="calculator.answer.value += '1'" />
+<input type="button" class="calc-button" value=" 2 " onclick="calculator.answer.value += '2'" />
+<input type="button" class="calc-button" value=" 3 " onclick="calculator.answer.value += '3'" />
+<input type="button" class="calc-button" value=" + " onclick="calculator.answer.value += '+'" />
+</div>
+
+<div class="calc-button-row">
+<input type="button" class="calc-button triple" value=" 0 " onclick="calculator.answer.value += '0'" />
+<input type="button" class="calc-button" value=" = "
+onclick="calculator.answer.value = eval(calculator.answer.value)" />
+</div>
+</section>
+</form>
+
+</body>
+
+</html>
